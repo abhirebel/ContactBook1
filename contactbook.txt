@@ -1,0 +1,55 @@
+names = []
+phone_numbers = []
+Addresses = []
+Emails = []
+Telephone_Numbers = []
+
+num = 1
+
+
+for i in range(num):
+    name = input("Name: ")
+    phone_number = int(input(" Phone Number: ")) # for convert to int => int(input)("Phone Number: "))
+    Address= input("Address:")
+    Email= input("Email:")
+    Telephone_Number= int(input("Telephone_Number: ")) # for convert to int => int(input) ("Telephone_Number: ")
+
+    names.append(name)
+    phone_numbers.append(phone_number)
+    Addresses.append(Address)
+    Emails.append(Email)
+    Telephone_Numbers.append(Telephone_Number)
+
+    
+print("\nName\t\t\tPhone Number")
+
+for i in range(num):
+    print("{}\t\t\t{}".format(names[i], phone_numbers[i]))
+
+search_term = input("\nPlease Enter Search Term: ")
+
+print("Search result is here:")
+
+
+
+if search_term in names:
+    index = names.index(search_term)
+    phone_number = phone_numbers[index]
+    Address = Addresses[index]
+    Email = Emails[index]
+    Telephone_Number = Telephone_Numbers[index]
+
+
+    print("Name: {}, Phone Number: {}, Address: {}, Email: {}, Telephone_Number: {}".format(search_term,str(phone_number)[0:10] , Address, Email, Telephone_Number))
+        
+else:
+    print("Name Not Found")
+    print("phone_number Not Found")
+    print("Address Not Found")
+    print("Email Not Found")
+    print("Telephone_Number Not Found")
+    print ("Invalid Number")
+
+
+    # else:
+    #     print("invalid number")
